@@ -1,10 +1,12 @@
+const { v4: uuid } = require("uuid");
+
 exports.seed = function (knex) {
   return knex("saleOff")
     .del()
     .then(function () {
       return knex("saleOff").insert([
         {
-          id: 1,
+          id: uuid(),
           description: "Shampoo Dove",
           image:
             "https://img2.gratispng.com/20180128/hsq/kisspng-dove-shampoo-hair-conditioner-shower-gel-cosmetolo-dove-shampoo-5a6de4e3475124.6720577715171514592921.jpg",
@@ -12,7 +14,7 @@ exports.seed = function (knex) {
           date: "Mon Oct 31 2016 00:00:00 GMT-0700 (PDT)",
         },
         {
-          id: 2,
+          id: uuid(),
           description: "Sabonete Dove",
           image:
             "https://img1.gratispng.com/20180919/srz/kisspng-cream-dove-bar-soap-product-dove-2-1-5ba3131e5b0995.9511761215374139183729.jpg",
@@ -20,7 +22,7 @@ exports.seed = function (knex) {
           date: "Sun Oct 30 2016 00:00:00 GMT-0700 (PDT)",
         },
         {
-          id: 3,
+          id: uuid(),
           description: "Listerine",
           image:
             "https://e7.pngegg.com/pngimages/266/63/png-clipart-listerine-mouthwash-johnson-johnson-listerine-mouthwash-listerine-total-care-tooth-germ-dentistry-toothpaste-thumbnail.png",

@@ -1,6 +1,6 @@
 exports.up = function (knex) {
   return knex.schema.createTable("saleOff", (table) => {
-    table.integer("id").primary();
+    table.string("id").primary();
     table.string("description").notNullable();
     table.string("image").notNullable();
     table.float("price").unique().notNullable();
