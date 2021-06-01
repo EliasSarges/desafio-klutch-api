@@ -16,7 +16,7 @@ module.exports = {
       `%${name}%`
     );
 
-    const data = { ...saleOffData, ...productsData };
+    const data = [...saleOffData, ...productsData];
 
     return res.status(200).json(data);
   },
