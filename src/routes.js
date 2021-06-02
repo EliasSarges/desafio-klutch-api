@@ -10,7 +10,10 @@ routes.get("/sale-off", SaleOffController.index);
 routes.get("/search", SearchController.index);
 
 routes.get("*", (req, res) => {
-  return res.status(404).json({ error: "rota nao encontrada" });
+  return res.status(404).json({
+    error: "rota nao encontrada",
+    rotasDisponiveis: ["/products", "/sale-off", "/search/?name"],
+  });
 });
 
 module.exports = routes;
